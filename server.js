@@ -11,6 +11,7 @@ const issuesRoutes = require('./routes/issues');
 const authRoutes = require('./routes/auth');
 const adminRoutes = require('./routes/admin');
 const exportRoutes = require('./routes/export');
+const cloudinaryRoutes = require('./routes/cloudinary');
 
 // Import middleware
 const { errorHandler } = require('./middleware/errorHandler');
@@ -58,6 +59,7 @@ app.use('/api/issues', issuesRoutes);
 app.use('/api/auth', authRoutes);
 app.use('/api/admin', adminRoutes);
 app.use('/api/export', exportRoutes);
+app.use('/api/cloudinary', cloudinaryRoutes);
 
 // Default route
 app.get('/', (req, res) => {
